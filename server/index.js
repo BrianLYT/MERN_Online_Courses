@@ -21,7 +21,7 @@ mongoose
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("api/user", authRoute);
+app.use("/api/user", authRoute);
 
 app.listen(8080, () => {
   console.log("Server running on port 8080.");
