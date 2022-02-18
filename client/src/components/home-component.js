@@ -9,7 +9,8 @@ const HomeComponent = () => {
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
-          height: "52vh",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div class="row py-lg-5">
