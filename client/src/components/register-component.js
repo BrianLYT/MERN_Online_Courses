@@ -9,6 +9,7 @@ const RegisterComponent = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [role, setRole] = useState("student");
+  let [message, setMessage] = useState("");
 
   const handleChangeUsername = (e) => {
     setUsername(e.target.value);
@@ -30,6 +31,7 @@ const RegisterComponent = () => {
       })
       .catch((error) => {
         console.log(error.response);
+        setMessage(error.response.data);
       });
   };
 
@@ -38,12 +40,13 @@ const RegisterComponent = () => {
       <img
         className="rounded mx-auto d-block"
         src={logo}
-        alt=""
+        alt="logo"
         width="100"
         height="80"
       ></img>
       <br></br>
       <div>
+        {message && <div className="alert alert-danger">{message}</div>}
         <div>
           <label htmlFor="username">帳號</label>
           <input
