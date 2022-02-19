@@ -26,7 +26,9 @@ const RegisterComponent = () => {
   const handleRegister = () => {
     AuthService.register(username, email, password, role)
       .then(() => {
-        window.alert("註冊成功!您現在將被重新導向到登入頁面!");
+        window.alert(
+          "Registration succeeds. You are now redirected to the login page."
+        );
         history.push("/login");
       })
       .catch((error) => {
@@ -48,7 +50,7 @@ const RegisterComponent = () => {
       <div>
         {message && <div className="alert alert-danger">{message}</div>}
         <div>
-          <label htmlFor="username">帳號</label>
+          <label htmlFor="username">Username</label>
           <input
             onChange={handleChangeUsername}
             type="text"
@@ -68,7 +70,7 @@ const RegisterComponent = () => {
         </div>
         <br />
         <div className="form-group">
-          <label htmlFor="password">密碼</label>
+          <label htmlFor="password">Password</label>
           <input
             onChange={handleChangePassword}
             type="password"
@@ -77,7 +79,7 @@ const RegisterComponent = () => {
           />
         </div>
         <br />
-        <label htmlFor="password">註冊身份</label>
+        <label htmlFor="password">Role</label>
         <div className="form-floating">
           <select
             onChange={handleChangeRole}
@@ -85,15 +87,15 @@ const RegisterComponent = () => {
             id="floatingSelect"
             aria-label="Floating label select example"
           >
-            <option value="student">學生</option>
-            <option value="instructor">講師</option>
+            <option value="student">Student</option>
+            <option value="instructor">Instructor</option>
           </select>
-          <label htmlFor="floatingSelect">選擇註冊身份</label>
+          <label htmlFor="floatingSelect">Select Role</label>
         </div>
         <br />
         <div className="text-center">
           <button onClick={handleRegister} className="btn btn-primary btn-lg">
-            <span>註冊</span>
+            <span>Register</span>
           </button>
         </div>
       </div>

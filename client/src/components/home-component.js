@@ -17,17 +17,14 @@ const HomeComponent = () => {
           <div className="col-lg-6 col-md-8 mx-auto">
             <h1 className="fw-bold text-white">MERN Online Courses</h1>
             <br></br>
-            <p className="fw-normal lead text-white fs-4">
-              最優質豐富的課程網站，立即開始學習吧!
+            <p className="fw-normal lead text-white fs-3">
+              Enhance your knowledge and skills
             </p>
             <br></br>
             <br></br>
             <p>
               <a href="#" className="btn btn-primary btn-lg my-2 m-3 ">
-                開始學習
-              </a>
-              <a href="#" className="btn btn-secondary btn-lg my-2 m-3">
-                成為講師
+                Join Now
               </a>
             </p>
           </div>

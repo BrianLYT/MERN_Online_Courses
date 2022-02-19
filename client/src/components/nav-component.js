@@ -28,22 +28,22 @@ const NavComponent = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" to="/">
-                首頁
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/register">
-                註冊
+                Register
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/login">
-                登入
+                Log in
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="#">
-                登出
+                Log out
               </Link>
             </li>
           </ul>
@@ -51,12 +51,12 @@ const NavComponent = () => {
             <input
               className="form-control me-2"
               type="search"
-              placeholder="搜尋"
+              placeholder="Search"
               aria-label="Search"
             ></input>
           </form>
           <button className="btn btn-warning" type="submit">
-            搜尋
+            Search
           </button>
         </div>
       </div>
