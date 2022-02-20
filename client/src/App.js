@@ -5,6 +5,7 @@ import NavComponent from "./components/nav-component";
 import RegisterComponent from "./components/register-component";
 import LoginComponent from "./components/login-component";
 import ProfileComponent from "./components/profile-component";
+import CourseComponent from "./components/course-component";
 import AuthService from "./services/auth.service";
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
         </Route>
         <Route path="/profile" exact>
           <ProfileComponent
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        </Route>
+        <Route path="/course" exact>
+          <CourseComponent
             currentUser={currentUser}
             setCurrentUser={setCurrentUser}
           />
