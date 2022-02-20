@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import HomeComponent from "./components/home-component";
 import NavComponent from "./components/nav-component";
 import RegisterComponent from "./components/register-component";
 import LoginComponent from "./components/login-component";
+import ProfileComponent from "./components/profile-component";
+import AuthService from "./services/auth.service";
 
 function App() {
+  let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
+
   return (
     <div>
-      <NavComponent />
+      <NavComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <Switch>
         <Route path="/" exact>
           <HomeComponent />
@@ -17,7 +21,16 @@ function App() {
           <RegisterComponent />
         </Route>
         <Route path="/login" exact>
-          <LoginComponent />
+          <LoginComponent
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        </Route>
+        <Route path="/profile" exact>
+          <ProfileComponent
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
         </Route>
       </Switch>
     </div>

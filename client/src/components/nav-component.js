@@ -1,8 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import AuthService from "../services/auth.service";
 import logo from "../img/logo.svg";
 
-const NavComponent = () => {
+const NavComponent = (props) => {
+  let { currentUser, setCurrentUser } = props;
+  const history = useHistory();
+  const handleLogout = () => {
+    AuthService.logout();
+    window.alert("Logout Successfully, now you redirect to the homepage.");
+    setCurrentUser(null);
+    history.push("/");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -31,21 +41,34 @@ const NavComponent = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/register">
-                Register
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Log in
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="#">
-                Log out
-              </Link>
-            </li>
+            {!currentUser && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/register">
+                  Register
+                </Link>
+              </li>
+            )}
+            {!currentUser && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  Log in
+                </Link>
+              </li>
+            )}
+            {currentUser && (
+              <li className="nav-item">
+                <Link onClick={handleLogout} className="nav-link" to="#">
+                  Log out
+                </Link>
+              </li>
+            )}
+            {currentUser && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/profile">
+                  Profile
+                </Link>
+              </li>
+            )}
           </ul>
           <form className="d-flex">
             <input

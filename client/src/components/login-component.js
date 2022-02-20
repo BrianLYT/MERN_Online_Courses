@@ -3,7 +3,8 @@ import { useHistory } from "react-router";
 import AuthService from "../services/auth.service";
 import logo from "../img/logo.svg";
 
-const LoginComponent = () => {
+const LoginComponent = (props) => {
+  let { currentUser, setCurrentUser } = props;
   const history = useHistory();
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
@@ -14,13 +15,17 @@ const LoginComponent = () => {
   const handleChangePassword = (e) => {
     setPassword(e.target.value);
   };
-  const handleLogin = () => {
+  const handleLogin = (e) => {
     AuthService.login(email, password)
       .then((response) => {
         console.log(response.data);
         if (response.data.token) {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
+        window.alert(
+          "Login successfully,you are now redirected to the profile page."
+        );
+        setCurrentUser(AuthService.getCurrentUser());
         history.push("/profile");
       })
       .catch((error) => {
