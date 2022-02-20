@@ -18,14 +18,25 @@ const CourseComponent = (props) => {
     } else {
       _id = "";
     }
-    CourseService.get(_id)
-      .then((data) => {
-        console.log(data);
-        setCourseData(data.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (currentUser.user.role === "instructor") {
+      CourseService.get(_id)
+        .then((data) => {
+          console.log(data);
+          setCourseData(data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else if (currentUser.user.role === "student") {
+      CourseService.getEnrolledCourse(_id)
+        .then((data) => {
+          console.log(data);
+          setCourseData(data.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }, []);
 
   return (
@@ -48,7 +59,7 @@ const CourseComponent = (props) => {
       )}
       {currentUser && currentUser.user.role === "student" && (
         <div>
-          <h1>Welcome to student's Course page</h1>
+          <h1 className="text-center">Welcome to student's Course page</h1>
         </div>
       )}
       {currentUser && courseData && courseData.length !== 0 && (

@@ -8,6 +8,7 @@ import ProfileComponent from "./components/profile-component";
 import CourseComponent from "./components/course-component";
 import AuthService from "./services/auth.service";
 import PostCourseComponent from "./components/postCourse-component";
+import EnrollComponent from "./components/enroll-component";
 
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
@@ -42,6 +43,12 @@ function App() {
         </Route>
         <Route path="/postCourse" exact>
           <PostCourseComponent
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        </Route>
+        <Route path="/enroll" exact>
+          <EnrollComponent
             currentUser={currentUser}
             setCurrentUser={setCurrentUser}
           />

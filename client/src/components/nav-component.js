@@ -83,6 +83,13 @@ const NavComponent = (props) => {
                 </Link>
               </li>
             )}
+            {currentUser && currentUser.user.role === "student" && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/enroll">
+                  Enroll
+                </Link>
+              </li>
+            )}
           </ul>
           <form className="d-flex">
             <input
