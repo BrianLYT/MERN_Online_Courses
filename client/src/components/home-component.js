@@ -1,5 +1,11 @@
 import React from "react";
 import image from "../img/learn.jpg";
+import workoutImg from "../img/workout.jpg";
+import webDesignImg from "../img/webDesign.jpg";
+import dataScienceImg from "../img/dataScience.jpg";
+import stockAnalysisImg from "../img/stockAnalysis.jpg";
+import cookingImg from "../img/cooking.jpg";
+import makeupsImg from "../img/makeups.jpg";
 
 const HomeComponent = () => {
   return (
@@ -23,7 +29,7 @@ const HomeComponent = () => {
             <br></br>
             <br></br>
             <p>
-              <a href="#" className="btn btn-primary btn-lg my-2 m-3 ">
+              <a href="/register" className="btn btn-primary btn-lg my-2 m-3 ">
                 Join Now
               </a>
             </p>
@@ -36,272 +42,106 @@ const HomeComponent = () => {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div className="col">
               <div className="card shadow-sm">
-                <svg
+                <img
+                  src={workoutImg}
                   className="bd-placeholder-img card-img-top"
+                  alt="workoutPicture"
                   width="100%"
                   height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
+                ></img>
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    The Right Diet, Workout, Meal Plan, Exercise Motivation,
+                    Nutrition, Cardio, Home Workout.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="card shadow-sm">
-                <svg
+                <img
+                  src={webDesignImg}
                   className="bd-placeholder-img card-img-top"
+                  alt="webDesignPicture"
                   width="100%"
                   height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
+                ></img>
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Become a Full-Stack Web Developer. HTML, CSS, Javascript,
+                    Node..., build real projects.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="card shadow-sm">
-                <svg
+                <img
+                  src={cookingImg}
                   className="bd-placeholder-img card-img-top"
+                  alt="cookingPicture"
                   width="100%"
                   height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
+                ></img>
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Cook like a pro, master the basic techniques used in the
+                    World's culinary industry!
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
 
             <div className="col">
               <div className="card shadow-sm">
-                <svg
+                <img
+                  src={stockAnalysisImg}
                   className="bd-placeholder-img card-img-top"
+                  alt="stockAnalysisPicture"
                   width="100%"
                   height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
+                ></img>
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Stock Market Technical Analysis, Day Trading, PT Technical
+                    Analysis Trading, Candlestick, Options, Swing Trading, Chart
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="card shadow-sm">
-                <svg
+                <img
+                  src={makeupsImg}
                   className="bd-placeholder-img card-img-top"
+                  alt="makeupsPicture"
                   width="100%"
                   height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
+                ></img>
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Learn to create the perfect eye makeup look for any eye
+                    shape. Perfect for the complete beginner or new makeup
+                    artist!
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
+              <img
+                src={dataScienceImg}
+                className="bd-placeholder-img card-img-top"
+                alt="dataSciencePicture"
+                width="100%"
+                height="225"
+              ></img>
               <div className="card shadow-sm">
-                <svg
-                  className="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Learn Data Science step by step through real Analytics
+                    examples. Data Mining, Modeling, Tableau Visualization and
+                    more!
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
