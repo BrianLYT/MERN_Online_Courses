@@ -86,22 +86,11 @@ const NavComponent = (props) => {
             {currentUser && currentUser.user.role === "student" && (
               <li className="nav-item">
                 <Link className="nav-link" to="/enroll">
-                  Enroll
+                  Enroll Course
                 </Link>
               </li>
             )}
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            ></input>
-          </form>
-          <button className="btn btn-warning" type="submit">
-            Search
-          </button>
         </div>
       </div>
     </nav>

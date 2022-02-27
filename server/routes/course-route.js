@@ -35,7 +35,7 @@ router.get("/instructor/:_instructor_id", (req, res) => {
 // Search for courses by name
 router.get("/findByName/:name", (req, res) => {
   let { name } = req.params;
-  Course.find({ title: name })
+  Course.find({ title: { $regex: ".*" + name + ".*" } })
     .populate("instructor", ["username", "email"])
     .then((course) => {
       res.status(200).send(course);

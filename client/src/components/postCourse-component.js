@@ -53,6 +53,7 @@ const PostCourseComponent = (props) => {
       )}
       {currentUser && currentUser.user.role === "instructor" && (
         <div className="form-group">
+          <h1 className="text-center">Post Course</h1>
           <label for="exampleforTitle">Title</label>
           <input
             name="title"
