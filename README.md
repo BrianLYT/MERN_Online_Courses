@@ -12,28 +12,28 @@ An Online Courses built with MERN stack, that use Node.js, Express.js, React, Mo
   
 ## Demo
 ### Home  
-![Home]("./assets/Home.PNG")
+![Home](./assets/Home.PNG)
 
 ### Register
-![Register]("./assets/Register.PNG")
+![Register](./assets/Register.PNG)
 
 ### Login
-![Login]("./assets/Login.PNG")
+![Login](./assets/Login.PNG)
 
 ### Profile
-![Profile]("./assets/Profile.PNG")
+![Profile](./assets/Profile.PNG)
 
 ### Instructor Post Course
-![Post Course]("./assets/PostCourse.PNG")
+![Post Course](./assets/PostCourse.PNG)
 
 ### Instructor's Courses
-![Instructor's Course]("./assets/InstructorCourse.PNG")
+![Instructor's Course](./assets/InstructorCourse.PNG)
 
 ### Student Enroll & Search Courses
-![Enroll Course]("./assets/EnrollCourse.PNG")
+![Enroll Course](./assets/EnrollCourse.PNG)
 
 ### Student's Courses
-![Student's Courses]("./assets/StudentCourse.PNG")
+![Student's Courses](./assets/StudentCourse.PNG)
 
 
 ## Install
